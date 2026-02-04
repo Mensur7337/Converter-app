@@ -1,0 +1,120 @@
+* {
+    margin: 0; /* Tüm elemanların varsayılan marginini kaldır */
+    padding: 0; /* Tüm elemanların varsayılan paddingini kaldır */
+    box-sizing: border-box; /* Padding ve border'ı toplam genişliğe dahil et */
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern ve okunabilir font */
+    background: linear-gradient(135deg, #667eee 0%, #764ba2 100%); /* Gradient arka plan */
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Yatay ortala */
+    align-items: center; /* Dikey ortala */
+    padding: 20px; /* Ekran kenar boşlukları */
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    background: url('bg.jpg') center/cover no-repeat; /* Arka plan resmi */
+    filter: blur(8px); /* Blurlu efekt */
+    opacity: 0.85; /* Arka planı hafif soluk yap, ön plan öne çıksın diye yapıldı */
+    z-index: -1; /* Arka planda kalması için */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15); /* Arka plan resmine göre yarı saydam beyaz */
+    backdrop-filter: blur(12px); /* Kartı da hafif blur ile entegre etme  */
+    border-radius: 16px; /* Yuvarlatılmış köşeler */
+    padding: 2.5rem 2rem; /* İç boşluk */
+    width: 100%; /* Tam genişlik */
+    max-width: 520px;  /* Maksimum genişlik */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);  /* Hafif gölge efekti */
+    border: 1px solid rgba(255,255,255,0.2); /* İnce kenarlık */
+    text-align: center;/* Metin ortalama */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* İnce kenarlık */
+}
+
+h1 {
+    margin-bottom: 1.8rem; /* Alt boşluk */
+    font-size: 2.1rem;  /* Başlık boyutu */
+    letter-spacing: 1px; /* Harfler arası boşluk */
+    color: #f0f0ff; /* Açık renk metin için */
+}
+
+.controls {
+    display: flex; /* Esnek kutu düzeni */
+    flex-direction: column; /* Dikey hizalama */
+    gap: 1.1rem; /* Elemanlar arası boşluk */
+    margin-bottom: 2rem; /* Alt boşluk */
+}
+
+select, input[type="number"] {
+    padding: 14px 16px; /* İç boşluk */
+    font-size: 1.05rem; /* Yazı boyutu */
+    border: none;  /* Kenarlık yok */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    background: rgba(0,0,0,0.25); /* Koyu arka plan için koyu inputlar */
+    color: #e0e0ff; /* Açık renk metin */
+    outline: none; /* Odak kenarlığı yok */
+}
+
+select option {
+    background: #333355; 
+    color: #e0e0ff; 
+}
+
+input[type="number"]::placeholder { 
+    color: rgba(255,255,255,0.5); /* Yer tutucu renk */
+}
+
+select:focus, input:focus {
+    background: rgba(0,0,0,0.35);
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.main-result {
+    background: rgba(0,0,0,0.4);
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.main-result strong {
+    color: #a0ffe0; /* Ana sonuç için vurgu rengi */
+}
+
+.results {
+    display: grid; /* Grid düzeni */
+    grid-template-columns: 1fr; /* Tek sütun */
+    gap: 0.9rem; /* Elemanlar arası boşluk */
+    text-align: left; /* Sol hizalama */
+}
+
+.result-item {
+    background: rgba(0,0,0,0.3); /* Yarı saydam arka plan */
+    padding: 14px 18px; /* İç boşluk */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    font-size: 1.05rem; /* Yazı boyutu */
+}
+
+.result-item strong {
+    color: #c0c0ff;
+}
+
+@media (min-width: 500px) {
+    .controls {
+        flex-direction: row; /* Yatay hizalama */
+        flex-wrap: wrap; /* Satır kaydırma */
+        justify-content: center; /* Ortala */
+    } 
+    
+    select, input[type="number"] {
+        flex: 1; /* Eşit genişlik */
+        min-width: 120px; /* Minimum genişlik */
+    }
+}

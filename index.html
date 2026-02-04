@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="card">
+    <h1>🔄 Converter App</h1>
+
+    <div class="controls">
+        <select id="category">
+            <option value="mass">Mass</option>
+            <option value="length">Length</option>
+            <option value="temperature">Temperature</option>
+            <option value="volume">Volume</option>
+            <option value="additional">Time</option>
+        </select>
+
+        <select id="fromUnit"></select>
+        <select id="toUnit"></select>
+
+        <input 
+            type="number" 
+            id="inputValue" 
+            placeholder="Enter value" 
+            step="any">
+    </div>
+
+    <div id="mainResult" class="main-result"></div>
+    <div id="results" class="results"></div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
