@@ -1,64 +1,64 @@
 * {
-    margin: 0; /* Tüm elemanların varsayılan marginini kaldır */
-    padding: 0; /* Tüm elemanların varsayılan paddingini kaldır */
-    box-sizing: border-box; /* Padding ve border'ı toplam genişliğe dahil et */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
 }
 
 body {
     min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern ve okunabilir font */
-    background: linear-gradient(135deg, #667eee 0%, #764ba2 100%); /* Gradient arka plan */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eee 0%, #764ba2 100%); 
     color: #fff;
     display: flex;
-    justify-content: center; /* Yatay ortala */
-    align-items: center; /* Dikey ortala */
-    padding: 20px; /* Ekran kenar boşlukları */
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
 }
 
 .background {
     position: fixed;
     inset: 0;
-    background: url('bg.jpg') center/cover no-repeat; /* Arka plan resmi */
-    filter: blur(8px); /* Blurlu efekt */
-    opacity: 0.85; /* Arka planı hafif soluk yap, ön plan öne çıksın diye yapıldı */
-    z-index: -1; /* Arka planda kalması için */
+    background: url('bg.jpg') center/cover no-repeat;
+    filter: blur(8px); 
+    opacity: 0.85; 
+    z-index: -1; 
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.15); /* Arka plan resmine göre yarı saydam beyaz */
-    backdrop-filter: blur(12px); /* Kartı da hafif blur ile entegre etme  */
-    border-radius: 16px; /* Yuvarlatılmış köşeler */
-    padding: 2.5rem 2rem; /* İç boşluk */
-    width: 100%; /* Tam genişlik */
-    max-width: 520px;  /* Maksimum genişlik */
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);  /* Hafif gölge efekti */
-    border: 1px solid rgba(255,255,255,0.2); /* İnce kenarlık */
-    text-align: center;/* Metin ortalama */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* İnce kenarlık */
+    background: rgba(183, 159, 159, 0.15); 
+    backdrop-filter: blur(12px);
+    border-radius: 16px; 
+    padding: 2.5rem 2rem; 
+    width: 100%; 
+    max-width: 520px;  
+    box-shadow: 0 8px 32px rgba(117, 7, 226, 0.3);/* gölf*/
+    border: 1px solid rgba(186, 92, 92, 0.225); 
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
 }
 
 h1 {
-    margin-bottom: 1.8rem; /* Alt boşluk */
-    font-size: 2.1rem;  /* Başlık boyutu */
-    letter-spacing: 1px; /* Harfler arası boşluk */
-    color: #f0f0ff; /* Açık renk metin için */
+    margin-bottom: 1.8rem; 
+    font-size: 2.1rem;  
+    letter-spacing: 1px; 
+    color: #f0f0ff; 
 }
 
 .controls {
-    display: flex; /* Esnek kutu düzeni */
-    flex-direction: column; /* Dikey hizalama */
-    gap: 1.1rem; /* Elemanlar arası boşluk */
-    margin-bottom: 2rem; /* Alt boşluk */
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.1rem; 
+    margin-bottom: 2rem; 
 }
 
 select, input[type="number"] {
-    padding: 14px 16px; /* İç boşluk */
-    font-size: 1.05rem; /* Yazı boyutu */
-    border: none;  /* Kenarlık yok */
-    border-radius: 10px; /* Yuvarlatılmış köşeler */
-    background: rgba(0,0,0,0.25); /* Koyu arka plan için koyu inputlar */
-    color: #e0e0ff; /* Açık renk metin */
-    outline: none; /* Odak kenarlığı yok */
+    padding: 14px 16px; 
+    font-size: 1.05rem; 
+    border: none;  
+    border-radius: 10px; 
+    background: rgba(0,0,0,0.25); 
+    color: #e0e0ff; 
+    outline: none; 
 }
 
 select option {
@@ -67,7 +67,7 @@ select option {
 }
 
 input[type="number"]::placeholder { 
-    color: rgba(255,255,255,0.5); /* Yer tutucu renk */
+    color: rgba(255,255,255,0.5);
 }
 
 select:focus, input:focus {
@@ -78,43 +78,44 @@ select:focus, input:focus {
 .main-result {
     background: rgba(0,0,0,0.4);
     padding: 18px;
-    border-radius: 12px;
+    border-radius: 6px;
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
     color: #ffffff;
 }
 
 .main-result strong {
-    color: #a0ffe0; /* Ana sonuç için vurgu rengi */
+    color: #a0ffe0; 
 }
 
 .results {
-    display: grid; /* Grid düzeni */
-    grid-template-columns: 1fr; /* Tek sütun */
-    gap: 0.9rem; /* Elemanlar arası boşluk */
-    text-align: left; /* Sol hizalama */
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 0.9rem; 
+    text-align: left; 
 }
 
 .result-item {
-    background: rgba(0,0,0,0.3); /* Yarı saydam arka plan */
-    padding: 14px 18px; /* İç boşluk */
-    border-radius: 10px; /* Yuvarlatılmış köşeler */
-    font-size: 1.05rem; /* Yazı boyutu */
+    background: rgba(0,0,0,0.3); 
+    padding: 14px 18px; 
+    border-radius: 10px;
+    font-size: 1.05rem; 
 }
 
 .result-item strong {
-    color: #c0c0ff;
+    color: rgb(191, 191, 224);
 }
+
 
 @media (min-width: 500px) {
     .controls {
-        flex-direction: row; /* Yatay hizalama */
-        flex-wrap: wrap; /* Satır kaydırma */
-        justify-content: center; /* Ortala */
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
     } 
     
     select, input[type="number"] {
-        flex: 1; /* Eşit genişlik */
-        min-width: 120px; /* Minimum genişlik */
+        flex: 1; 
+        min-width: 120px; 
     }
 }

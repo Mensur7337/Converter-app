@@ -21,21 +21,15 @@ const units = {
         { name: "Milliliter", symbol: "mL", toBase: v => v / 1000, fromBase: v => v * 1000 },
         { name: "Gallon (US)",symbol: "gal",toBase: v => v * 3.78541, fromBase: v => v / 3.78541 }
     ],
-    time: [ // base unit: second
-        { name: "Hour",   symbol: "h",   toBase: v => v * 3600, fromBase: v => v / 3600 },
-        { name: "Minute", symbol: "min", toBase: v => v * 60,   fromBase: v => v / 60 },
-        { name: "Second", symbol: "s",   toBase: v => v,        fromBase: v => v }
-    ]
 };
 
 // UI elements
 const categorySelect = document.getElementById("category");
 const fromUnitSelect = document.getElementById("fromUnit");
-const toUnitSelect   = document.getElementById("toUnit");
-const inputValue     = document.getElementById("inputValue");
-const mainResultDiv  = document.getElementById("mainResult");
-const resultsDiv     = document.getElementById("results");
-
+const toUnitSelect  = document.getElementById("toUnit");
+const inputValue  = document.getElementById("inputValue");
+const mainResultDiv = document.getElementById("mainResult");
+const resultsDiv = document.getElementById("results");
 // Update unit options when category changes
 function updateUnitOptions() {
     const cat = categorySelect.value;
@@ -49,11 +43,9 @@ function updateUnitOptions() {
         fromUnitSelect.appendChild(option);
         toUnitSelect.appendChild(option.cloneNode(true));
     });
-
     toUnitSelect.value = 1;
     convert();
 }
-
 // Convert value
 function convert() {
     const cat = categorySelect.value;
@@ -63,7 +55,6 @@ function convert() {
 
     mainResultDiv.innerHTML = "";
     resultsDiv.innerHTML = "";
-
     if (isNaN(value)) return;
 
     const fromUnit = units[cat][fromIdx];
@@ -73,7 +64,6 @@ function convert() {
         mainResultDiv.innerHTML = `<div style="color:red">Invalid temperature value</div>`;
         return;
     }
-
     const toUnit = units[cat][toIdx];
     const mainResult = toUnit.fromBase(baseValue);
     const roundedMain = Number(mainResult.toFixed(4));
@@ -93,12 +83,10 @@ function convert() {
         resultsDiv.appendChild(item);
     });
 }
-
 // Events
 categorySelect.addEventListener("change", updateUnitOptions);
 fromUnitSelect.addEventListener("change", convert);
 toUnitSelect.addEventListener("change", convert);
 inputValue.addEventListener("input", convert);
-
 // Init
 updateUnitOptions();
