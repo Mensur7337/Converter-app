@@ -1,4 +1,5 @@
-<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/4928d91a-22a8-4d77-863d-feb184b488fc" />
+<img width="300" height="375" alt="Converter-App Screenshot" src="https://github.com/user-attachments/assets/b5c37124-b8b2-4a18-a9e6-8b2bce0af59a" />
+
 
 
 # Unit Converter App
