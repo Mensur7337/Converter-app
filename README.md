@@ -1,4 +1,4 @@
-<img width="300" height="375" alt="Converter-App Screenshot" src="https://github.com/user-attachments/assets/b5c37124-b8b2-4a18-a9e6-8b2bce0af59a" />
+<img width="320" height="350" alt="Converter-App Screenshot" src="https://github.com/user-attachments/assets/b5c37124-b8b2-4a18-a9e6-8b2bce0af59a" />
 
 
 
